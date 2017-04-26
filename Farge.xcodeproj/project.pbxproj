@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21A4B6B1EB149C700D20223 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21A4B6A1EB149C700D20223 /* Tests.swift */; };
+		D21A4B6C1EB149C700D20223 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21A4B6A1EB149C700D20223 /* Tests.swift */; };
 		D2967E631EB13FF70002E4B9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2967E621EB13FF70002E4B9 /* List.swift */; };
 		D2967E641EB13FF70002E4B9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2967E621EB13FF70002E4B9 /* List.swift */; };
 		D2967E661EB140050002E4B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2967E651EB140050002E4B9 /* Parser.swift */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D21A4B6A1EB149C700D20223 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D2967E621EB13FF70002E4B9 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		D2967E651EB140050002E4B9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		D2967E681EB1414D0002E4B9 /* Farge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Farge.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 			children = (
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
 				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
+				D21A4B6A1EB149C700D20223 /* Tests.swift */,
 			);
 			path = FargeTests;
 			sourceTree = "<group>";
@@ -243,7 +247,7 @@
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
@@ -251,6 +255,7 @@
 					};
 					D5C629481C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -320,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21A4B6B1EB149C700D20223 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21A4B6C1EB149C700D20223 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.FargeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -516,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.FargeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -570,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -582,6 +592,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Farge-MacTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -589,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -601,6 +614,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Farge-MacTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
