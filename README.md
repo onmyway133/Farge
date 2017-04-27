@@ -38,6 +38,10 @@ github "onmyway133/Farge"
 
 Khoa Pham, onmyway133@gmail.com
 
+## Credit
+
+Credit goes to http://chir.ag/projects/name-that-color
+
 ## Contributing
 
 We would love you to contribute to **Farge**, check the [CONTRIBUTING](https://github.com/onmyway133/Farge/blob/master/CONTRIBUTING.md) file for more info.
