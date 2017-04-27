@@ -4,9 +4,8 @@ import XCTest
 class Tests: XCTestCase {
 
   func testRGB() {
-    let rgb = Converter().rgb(hex: "FF00FF")
-    XCTAssertEqual(rgb.r, 1)
-    XCTAssertEqual(rgb.g, 0)
-    XCTAssertEqual(rgb.b, 1)
+    XCTAssertEqual(Converter().rgb(hex: "FFFFFF"), RGB(r: 255, g: 255, b: 255))
+    XCTAssertEqual(Converter().rgb(hex: "FF69B4"), RGB(r: 255, g: 105, b: 180))
+    XCTAssertEqual(Converter().rgb(hex: "DEB887"), RGB(r: 222, g: 184, b: 135))
   }
 }

@@ -1,17 +1,5 @@
 import Foundation
 
-struct RGB {
-  let r: Float
-  let g: Float
-  let b: Float
-}
-
-struct HSL {
-  let h: Float
-  let s: Float
-  let l: Float
-}
-
 struct Converter {
 
   func rgb(hex: String) -> RGB {
@@ -19,7 +7,7 @@ struct Converter {
     let g = decimal(string: hex, from: 2, length: 2)
     let b = decimal(string: hex, from: 4, length: 2)
 
-    return RGB(r: r/255, g: g/255, b: b/255)
+    return RGB(r: r, g: g, b: b)
   }
 
   func hsl(rgb: RGB) -> HSL {
