@@ -11,7 +11,37 @@ struct Converter {
   }
 
   func hsl(rgb: RGB) -> HSL {
-    return HSL(h: 0, s: 0, l: 0)
+    let r = rgb.r / 255
+    let g = rgb.g / 255
+    let b = rgb.b / 255;
+    let max = self.max(r, g, b)
+    let min = self.min(r, g, b)
+    var h: Float = 0
+    var s: Float = 0
+    let l: Float = (max + min) / 2
+
+    if (max == min) {
+      // achromatic
+      h = 0
+      s = 0
+    } else {
+      let d = max - min
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch max {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0)
+      case g:
+        h = (b - r) / d + 2
+      case b:
+        h = (r - g) / d + 4
+      default:
+        break
+      }
+
+      h = h / 6
+    }
+
+    return HSL(h: floor(h * 360), s: floor(s * 100), l: floor(l * 100))
   }
 
   // MARK: - Helper
@@ -23,5 +53,13 @@ struct Converter {
     let substring = string.substring(with: range)
     let value = UInt8(substring, radix: 16) ?? 0
     return Float(value)
+  }
+
+  func max(_ a: Float, _ b: Float, _ c: Float) -> Float {
+    return Swift.max(Swift.max(a, b), c)
+  }
+
+  func min(_ a: Float, _ b: Float, _ c: Float) -> Float {
+    return Swift.min(Swift.min(a, b), c)
   }
 }
