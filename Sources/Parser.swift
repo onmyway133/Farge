@@ -3,6 +3,11 @@ import Foundation
 struct Parser {
 
   func parse(hex: String) -> String? {
+    let hex = hex.replacingOccurrences(of: "#", with: "")
+    guard hex.characters.count == 6 else {
+      return nil
+    }
+
     var name = ""
     var minDiff: Float = Float.greatestFiniteMagnitude
 

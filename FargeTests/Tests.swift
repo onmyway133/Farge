@@ -32,5 +32,6 @@ class Tests: XCTestCase {
     XCTAssertEqual(Parser().parse(hex: "FFFEFD"), "Romance")
     XCTAssertEqual(Parser().parse(hex: "6195ED"), "Cornflower Blue")
     XCTAssertEqual(Parser().parse(hex: "ABCDEF"), "Spindle")
+    XCTAssertEqual(Parser().parse(hex: "#EDA761"), "Porsche")
   }
 }
