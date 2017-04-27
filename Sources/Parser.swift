@@ -5,15 +5,9 @@ struct Parser {
   func parse(hex: String) -> String? {
     var name = ""
     var minDiff: Float = Float.greatestFiniteMagnitude
-    let rgb = Converter().rgb(hex: hex)
-    let hsl = Converter().hsl(rgb: rgb)
 
     mapping.forEach({ key, value in
-      let rgb2 = Converter().rgb(hex: key)
-      let hsl2 = Converter().hsl(rgb: rgb)
-      let diffRGB = pow(rgb.r - rgb2.r, 2) + pow(rgb.g - rgb2.g, 2) + pow(rgb.b - rgb2.b, 2)
-      let diffHSL = pow(hsl.h - hsl2.h, 2) + pow(hsl.s - hsl2.s, 2) + pow(hsl.l - hsl2.l, 2)
-      let diff = diffRGB + diffHSL * 2
+      let diff = self.diff(hex1: hex, hex2: key)
 
       if diff < minDiff {
         minDiff = diff
@@ -22,5 +16,19 @@ struct Parser {
     })
 
     return name
+  }
+
+  // MARK: - Helper
+
+  func diff(hex1: String, hex2: String) -> Float {
+    let rgb1 = Converter().rgb(hex: hex1)
+    let hsl1 = Converter().hsl(rgb: rgb1)
+
+    let rgb2 = Converter().rgb(hex: hex2)
+    let hsl2 = Converter().hsl(rgb: rgb2)
+
+    let diffRGB = pow(rgb1.r - rgb2.r, 2) + pow(rgb1.g - rgb2.g, 2) + pow(rgb1.b - rgb2.b, 2)
+    let diffHSL = pow(hsl1.h - hsl2.h, 2) + pow(hsl1.s - hsl2.s, 2) + pow(hsl1.l - hsl2.l, 2)
+    return diffRGB + diffHSL * 2
   }
 }
