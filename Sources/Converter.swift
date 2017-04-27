@@ -2,6 +2,10 @@ import Foundation
 
 struct Converter {
 
+  func hsl(hex: String) -> HSL {
+    return hsl(rgb: rgb(hex: hex))
+  }
+
   func rgb(hex: String) -> RGB {
     let r = decimal(string: hex, from: 0, length: 2)
     let g = decimal(string: hex, from: 2, length: 2)

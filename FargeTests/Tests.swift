@@ -23,4 +23,8 @@ class Tests: XCTestCase {
     let rgb = RGB(r: 174, g: 62, b: 113)
     XCTAssertEqual(Converter().hsl(rgb: rgb), HSL(h: 332, s: 47, l: 46))
   }
+
+  func testParser() {
+    XCTAssertEqual(Parser().parse(hex: "FFFFFF"), "Black")
+  }
 }
