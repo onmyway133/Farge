@@ -17,7 +17,7 @@ struct Converter {
   func hsl(rgb: RGB) -> HSL {
     let r = rgb.r / 255
     let g = rgb.g / 255
-    let b = rgb.b / 255;
+    let b = rgb.b / 255
     let max = self.max(r, g, b)
     let min = self.min(r, g, b)
     var h: Float = 0
@@ -30,7 +30,7 @@ struct Converter {
       s = 0
     } else {
       let d = max - min
-      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
       switch max {
       case r:
         h = (g - b) / d + (g < b ? 6 : 0)
