@@ -14,6 +14,7 @@
 ```swift
 Farge.name(hex: "FFFEFD") // Romance
 Farge.name(hex: "6195ED") // Cornflower Blue
+Farge.name(hex: "EDA761") // Porsche
 ```
 
 ## Installation
