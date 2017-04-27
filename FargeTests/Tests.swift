@@ -25,6 +25,10 @@ class Tests: XCTestCase {
   }
 
   func testParser() {
-    XCTAssertEqual(Parser().parse(hex: "FFFFFF"), "Black")
+    XCTAssertEqual(Parser().parse(hex: "000000"), "Black")
+    XCTAssertEqual(Parser().parse(hex: "FFFFFF"), "White")
+    XCTAssertEqual(Parser().parse(hex: "FF0000"), "Red")
+    XCTAssertEqual(Parser().parse(hex: "004816"), "Crusoe")
+    XCTAssertEqual(Parser().parse(hex: "FFFEFD"), "Romance")
   }
 }

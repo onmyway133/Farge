@@ -4,7 +4,7 @@ struct Parser {
 
   func parse(hex: String) -> String? {
     var chosen = ""
-    var min: Float = 0
+    var min: Float = Float.greatestFiniteMagnitude
     let hsl1 = Converter().hsl(hex: hex)
 
     mapping.forEach({ key, value in
