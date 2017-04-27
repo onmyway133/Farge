@@ -7,14 +7,13 @@
 [![Platform](https://img.shields.io/cocoapods/p/Farge.svg?style=flat)](http://cocoadocs.org/docsets/Farge)
 ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
 
-## Description
-
-**Farge** description.
+![](Screenshots/Banner.png)
 
 ## Usage
 
 ```swift
-<API>
+Farge.name(hex: "FFFEFD") // Romance
+Farge.name(hex: "6195ED") // Cornflower Blue
 ```
 
 ## Installation
