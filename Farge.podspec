@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Farge"
-  s.summary          = "A short description of Farge."
+  s.summary          = "Color in Swift"
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/onmyway133/Farge"
   s.license          = 'MIT'
